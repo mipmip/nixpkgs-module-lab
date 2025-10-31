@@ -2,13 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running 'nixos-help').
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib,modulesPath, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -22,12 +21,22 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable 'sudo' for the user.
     initialPassword = "nixos";
+    shell = pkgs.fish;
+  };
+
+  users.defaultUserShell = pkgs.fish;
+
+  programs.fish.enable = true;
+
+  services.documenso = {
+    enable = true;
   };
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
     vim
     wget
+    curl
     git
     htop
   ];
@@ -36,14 +45,10 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 22 ];
-  
+  networking.firewall.allowedTCPPorts = [ 22 3000 ];
+
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  system.stateVersion = "25.11";
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It's perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  system.stateVersion = "23.11"; # Did you read the comment?
 }

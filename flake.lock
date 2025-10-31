@@ -1,0 +1,23 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1761921399,
+        "narHash": "sha256-BJOZnepU3NT5h2BJOKOGBW1PRLy4e6nxtf9gV8nMzkg=",
+        "path": "/home/pim/cNixos/nixpkgs",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/pim/cNixos/nixpkgs",
+        "type": "path"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
