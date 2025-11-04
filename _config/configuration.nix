@@ -24,11 +24,6 @@
 
   programs.fish.enable = true;
 
-  services.documenso = {
-    enable = true;
-    environmentFile = ./documenso.env;
-  };
-
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
     vim
@@ -48,5 +43,4 @@
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "25.11";
-
 }
