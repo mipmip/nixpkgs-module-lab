@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "A flake for testing nixpkgs modules";
 
   inputs = {
     nixpkgs.url = "path:/home/pim/cNixos/nixpkgs";

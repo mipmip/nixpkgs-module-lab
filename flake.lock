@@ -2,8 +2,8 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1761921399,
-        "narHash": "sha256-BJOZnepU3NT5h2BJOKOGBW1PRLy4e6nxtf9gV8nMzkg=",
+        "lastModified": 1762199117,
+        "narHash": "sha256-j6CNnhToYUJHwaBnBw5v/K7cjzQQAmA/bTDw7IgmrWM=",
         "path": "/home/pim/cNixos/nixpkgs",
         "type": "path"
       },
