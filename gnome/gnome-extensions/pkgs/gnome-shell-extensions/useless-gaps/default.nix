@@ -24,10 +24,11 @@ in
     };
 
     src = fetchFromGitHub {
-      owner = "flaxrora";
+      owner = "mipmip";
+      #      owner = "flaxrora";
       repo = "gnome-shell-extensions-useless-gaps";
       rev = "main";
-      sha256 = "sha256-0yq1iFKaPuCmYKdhF6KAnvwZL4I1i1dEBSlCA9IowRc=";
+      sha256 = "sha256-B8rrHP9/zyq+KWr1wkUsVjcbIatT6AGeSgo7/3DFP1Y=";
     };
 
     nativeBuildInputs = [

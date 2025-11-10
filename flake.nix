@@ -23,7 +23,7 @@
 
         ./_config/configuration.nix
         #./documenso
-        ./gnome-ext-useless-gaps
+        ./gnome
       ];
     };
   };

@@ -5,7 +5,7 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-   # As of 25.11
+  # As of 25.11
   #  services.displayManager.gdm.enable = true;
   #  services.desktopManager.gnome.enable = true;
 
@@ -24,8 +24,4 @@
 
     home.stateVersion = "25.05";
   };
-
-
 }
-
-
