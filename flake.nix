@@ -3,8 +3,8 @@
 
   inputs = {
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; # GNOME 48
-    #nixpkgs.url = "path:/home/pim/cNixos/nixpkgs";
+    #nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; # GNOME 48
+    nixpkgs.url = "path:/home/pim/cNixos/nixpkgs";
 
     ## HOME MANAGER
     home-manager.url = "github:nix-community/home-manager/release-25.05";
@@ -22,8 +22,10 @@
         }
 
         ./_config/configuration.nix
+
         #./documenso
-        ./gnome
+        #./gnome
+        ./quiqr
       ];
     };
   };
