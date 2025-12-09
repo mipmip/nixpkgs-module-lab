@@ -7,6 +7,11 @@ CMDS=();DESC=();NARGS=$#;ARG1=$1;make_command(){ CMDS+=($1);DESC+=("$2");};usage
 
 make_command "buildrun" "Build and run the module set in \$MODULE"
 buildrun(){
+  if [ -z "${MODULE}" ]; then
+    echo "Error: MODULE environment variable is not set."
+    echo "Please set MODULE to a valid module name."
+    return 1
+  fi
 
   nix flake update && nom build .#nixosConfigurations.${MODULE}.config.system.build.vm
   ./result/bin/run-nixos-vm
