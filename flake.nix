@@ -33,7 +33,7 @@
         };
     in
     {
-      nixosConfigurations.quiqr = nixosvm ./quiqr;
+      nixosConfigurations.quiqr-server = nixosvm ./quiqr-server;
       nixosConfigurations.documenso = nixosvm ./documenso;
       nixosConfigurations.gnome = nixosvm ./gnome;
     };
