@@ -1,7 +1,15 @@
 { ... }:
+let
+  htpassword = ./quiqr-htpasswd; # (technative:technative)
+in
 {
   services.quiqr-server = {
     enable = true;
+    nginx = {
+      enable = true;
+      domain = "localhost";
+      basicAuthFile = htpassword;
+    };
   };
 
   virtualisation.vmVariant = {

@@ -23,8 +23,8 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1765305475,
-        "narHash": "sha256-JA/4wCRd5+U5H/Eoupir2PSeh5vL49fvVeAQPuj51Qs=",
+        "lastModified": 1765379943,
+        "narHash": "sha256-izgHKPLbQjuVA8e8Ba7d9ITHxvyVvUYWevz2CbrocUM=",
         "path": "/home/pim/cNixos/nixpkgs",
         "type": "path"
       },
